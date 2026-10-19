@@ -1,0 +1,21 @@
+---
+interface Props {
+    text: string;
+    href: string;
+}
+const { text, href } = Astro.props;
+---
+<a class="btn" href={href}>{text}</a>
+
+<style>
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--secondary-clr-200);
+    color: var(--secondary-clr-200);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: var(--secondary-clr-200);
+    color: var(--primary-clr-400);
+  }
+</style>

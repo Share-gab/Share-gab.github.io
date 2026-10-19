@@ -1,0 +1,93 @@
+---
+import cardImage from '../assets/Card.png';
+import Button from '../components/Buttons.astro';
+import Image from 'astro/components/Image.astro';
+---
+
+<section class="hero" id="home">
+    <div class="container hero__grid">
+        <div class="hero__content">
+            <h2>Analyze | Solve | Improve </h2>
+            <p class="hero__tagline"> Business Analyst | Data Analyst </p>
+            <Button text='Explore My Work' href="#portfolio"/>
+        </div>
+
+        <div class="hero__image">
+            <Image
+            class="hero__card"
+            src={cardImage}
+            alt= "Sharine Gabriella Collectible figure card"
+            width={600}
+            loading="eager"
+             />
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero__grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero__content {
+    max-width: 800px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .hero__tagline {
+    margin-bottom: 2rem;
+    color: var(--secondary-clr-200);
+    letter-spacing: 0.1em;
+  }
+
+  .hero__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero__card {
+    width: min(100%, 400px);
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    .hero__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero__image{
+        order: -1;
+    }
+
+    .hero__content {
+      text-align: left;
+      margin-inline: 0;
+      padding-left: 2rem;
+
+    }
+  }
+</style>

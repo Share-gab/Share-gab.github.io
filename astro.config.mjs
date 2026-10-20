@@ -5,7 +5,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://share-gab.github.io',
+  site: 'https://portfolio-sharine-gabriella-website.vercel.app',
   integrations: [react()],
 
   server: {
